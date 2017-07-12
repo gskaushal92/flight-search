@@ -1,0 +1,33 @@
+{
+  "name": "flight-search",
+  "version": "1.0.0",
+  "description": "Searching flight details",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall":"bower install",
+
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gskaushal92/flight-search.git"
+  },
+  "keywords": [
+    "flight",
+    "search"
+  ],
+  "author": "gopal sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gskaushal92/flight-search/issues"
+  },
+  "homepage": "https://github.com/gskaushal92/flight-search#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "http-server": "^0.10.0"
+  }
+}

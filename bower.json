@@ -1,0 +1,26 @@
+{
+  "name": "flight-search",
+  "description": "searching flight details",
+  "main": "index.js",
+  "authors": [
+    "gopal sharma"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "flight",
+    "search"
+  ],
+  "homepage": "https://github.com/gskaushal92/flight-search",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  }
+}
