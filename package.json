@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/gskaushal92/flight-search/issues"
   },
-  "homepage": "https://github.com/gskaushal92/flight-search#readme",
+  "homepage": "https://github.com/gskaushal92/flight-search/app",
   "dependencies": {
     "bower": "^1.8.0",
     "http-server": "^0.10.0"
