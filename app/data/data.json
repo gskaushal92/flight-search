@@ -1,0 +1,18 @@
+var flights={
+	"source":"PNQ",
+	"destination":"DEL",
+	"flight":"AI-202",
+	"depart":"10:00 AM",
+	"arrival":"12:00 PM"
+};
+
+var cities=[
+	{
+		"city":"Pune",
+		"cityCode":"PNQ"
+	},
+	{
+		"city":"Delhi",
+		"cityCode":"DEL"
+	}
+];
