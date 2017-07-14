@@ -8,17 +8,17 @@
 	<header>
 		<h2> Flight Search Engine</h2>
 	</header>
-	<main class="main-container">
+	<main class="main-container" ng-controller="FlightSearchCtrl">
 		<section class="left-container">
 			<div class="search-form">
 				<form>
-					<input type="text" name="originCity">
-					<input type="text" name="destinationCity">
-					<input type="date" name="departureDate">
-					<input type="date" name="returnDate">
-					<input type="number" name="passengers">
+					<input type="text" name="originCity" ng-model="flight.originCity">
+					<input type="text" name="destinationCity" ng-model="flight.destinationCity">
+					<input type="date" name="departureDate" ng-model="flight.departureDate">
+					<input type="date" name="returnDate" ng-model="flight.returnDate">
+					<input type="number" name="passengers" ng-model="flight.passengers">
 					<br/>
-					<input type="submit" name="submit" value="Search">
+					<input type="button" name="submit" value="Search" ng-click="searchFlights()">
 				</form>	
 			</div>
 			<div class="search-form refine-search">
@@ -36,11 +36,11 @@
 						<td>
 							<table class="inner-table">				
 								<tr>
-									<td colspan="2"><h3>Rs.9500.00</h3></td>
+									<td colspan="2"><h3>Rs.{{flightDetails[0].price}}</h3></td>
 									<td></td>
 								</tr>
 								<tr>
-									<td>AI-202</td>
+									<td>{{flightDetails[0].flight}}</td>
 									<td>AI-203</td>
 								</tr>
 								<tr>
@@ -48,11 +48,11 @@
 									<td>ADEL>PNQ</td>
 								</tr>
 								<tr>
-									<td>Depart: 10.00AM</td>
+									<td>Depart: {{flightDetails[0].depart}}</td>
 									<td>Depart: 08:00PM</td>
 								</tr>
 								<tr>
-									<td>Arrive: 12.00AM</td>
+									<td>Arrive: {{flightDetails[0].arrival}}</td>
 									<td>Arrive: 11:00PM</td>
 								</tr>
 						</table>	
