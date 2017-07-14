@@ -3,6 +3,7 @@
 <head>
 	<title>Flight Search</title>
 	<link rel="stylesheet" type="text/css" href="app.css">
+	<!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
 </head>
 <body>
 	<header>
@@ -12,13 +13,13 @@
 		<section class="left-container">
 			<div class="search-form">
 				<form>
-					<input type="text" name="originCity" ng-model="flight.originCity">
-					<input type="text" name="destinationCity" ng-model="flight.destinationCity">
-					<input type="date" name="departureDate" ng-model="flight.departureDate">
-					<input type="date" name="returnDate" ng-model="flight.returnDate">
-					<input type="number" name="passengers" ng-model="flight.passengers">
+					<input type="text" class="form-control" name="originCity" ng-model="flight.originCity" placeholder="Enter Origin City">
+					<input type="text" class="form-control" name="destinationCity" ng-model="flight.destinationCity" placeholder="Enter Destination City">
+					<input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" name="departureDate" ng-model="flight.departureDate" placeholder="Departure Date">
+					<input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" name="returnDate" ng-model="flight.returnDate" placeholder="Return Date">
+					<input type="number" class="form-control" name="passengers" ng-model="flight.passengers" placeholder="Passengers">
 					<br/>
-					<input type="button" name="submit" value="Search" ng-click="searchFlights()">
+					<input type="button" class="btn" name="submit" value="Search" ng-click="searchFlights()">
 				</form>	
 			</div>
 			<div class="search-form refine-search">
