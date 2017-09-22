@@ -1,92 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
-<title>Flight Search Engine</title>
-	<style type="text/css">
-		body{
-			font-family: Georgia,sans-serif;
-		}
-		h2{
-			border:2px solid grey;
-			padding: 10px;
-			-webkit-margin-before:0px;
-			-webkit-margin-after:0px;
-		}
-		h3,h4{
-			    -webkit-margin-before:0em;
-			    -webkit-margin-after:0em;
-		}
-		.main-container{
-			border:2px solid grey;
-			border-top: none;
-			height: 500px;
-		}
-		.left-container{
-			float: left;
-			border:none;
-			border-right: 2px solid grey;
-			height: 490px;
-			width: 20%;
-			padding: 5px;
-		}
-		.right-container{
-			float: right;
-			height: 80px;	
-			width: 79.04%		
-			
-		}
-		.search-form{
-			border:2px solid grey;
-			padding: 10px;
-		}
-		input{
-			margin-bottom: 4px;
-			width: 90%;
-			padding: 5px;
-		}
-		input[type="submit"]{
-			width: 100px;
-		}
-		table{
-			width: 97%;
-			border:2px solid grey;
-			margin-top: 20px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.inner-table{
-			border:none;
-			margin-top: 0px;
-		}
-		.top-right-Container{
-			height: 80px;
-			border-bottom: 2px solid grey;
-			margin: auto 0px auto 0px;
-		}
-		.refine-search{
-			margin-top: 10px;
-		}
-		.top-right-Container h2{
-			border:none;
-			position: relative;
-			top: 20%;
-			left: 2%;
-		}
-	</style>
+	<title>Flight Search Engine</title>
+	<link rel="stylesheet" href="style.css"></link>
 </head>
-<body>
-	<header>
-		<h2> Flight Search Engine</h2>
+<body ng-controller="FlightSearchCtrl">
+	<!-- <header>
+		<h2>{{flight}}</h2>
 	</header>
-	<main class="main-container">
+	<main class="main-container" >
 		<section class="left-container">
+			<div>
+				<span  ng-class="{'active': !return}"><a href="" ng-click="return=false"> One way</a></span>
+				<span  ng-class="{'active': return}"><a href="" ng-click="return=true"> Return </a> </span>
+			</div>
 			<div class="search-form">
 				<form>
-					<input type="text" name="originCity">
-					<input type="text" name="destinationCity">
-					<input type="date" name="departureDate">
-					<input type="date" name="returnDate">
-					<input type="number" name="passengers">
+					<input type="text" name="originCity" placeholder="Enter Origin City">
+					<input type="text" name="destinationCity" placeholder="Enter Destination City">
+					<input class="datePicker" type="date" name="departureDate" placeholder="Departure date">
+					<input class="datePicker" ng-show="return" type="date" name="returnDate" placeholder="Return date">
+					<input type="number" name="passengers" placeholder="Passengers">
 					<br/>
 					<input type="submit" name="submit" value="Search">
 				</form>	
@@ -101,38 +35,34 @@
 				<h2>Pune > Delhi > Pune</h2>
 			</div>
 			<div class="bottom-right-container">
-				<table>
-					<tr>
-						<td>
-							<table class="inner-table">				
-								<tr>
-									<td colspan="2"><h3>Rs.9500.00</h3></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>AI-202</td>
-									<td>AI-203</td>
-								</tr>
-								<tr>
-									<td>PNQ>DEL</td>
-									<td>ADEL>PNQ</td>
-								</tr>
-								<tr>
-									<td>Depart: 10.00AM</td>
-									<td>Depart: 08:00PM</td>
-								</tr>
-								<tr>
-									<td>Arrive: 12.00AM</td>
-									<td>Arrive: 11:00PM</td>
-								</tr>
-						</table>	
-						</td>
-					</tr>
-				</table>							
+				<div class="flight-details" ng-repeat="flight in flights.flights">
+                        <div><h2> Rs. {{flight.price}} </h2></div>
+                        <div class="departure">
+                            <div>{{flight.flightId}}</div>
+                            <div><h3>{{flight.sourceCode}} > {{flight.destinationCode}}</h3></div>
+                            <div><h3>Depart: {{flight.departureDateTime}}</h3></div>
+                            <div><h3>Arrive: {{flight.arrivalDateTime}}</h3></div>
+                        </div>
+                        <div class="arrival">
+                            <div>AI-202</div>
+                            <div><h3>PNQ>DEL</h3></div>
+                            <div><h3>Depart: 10.00AM</h3></div>
+                            <div><h3>Arrive: 12.00AM</h3></div>
+                        </div>
+                        <div class="book">
+                            <div class="book-flight"></div>
+                            <button>Book this flight</button>
+                        </div>
+                    </div>									
 			</div>
-		</section>
-	</main>
-
+		</section> 
+	</main>-->
+	
+	<input class="min" name="range_1" type="range" min="1" max="100" value="10" />                                
+	<input class="max" name="range_1" type="range" min="1" max="100" value="90" />                                
+	<span class="range_min light left">10.000 €</span>                                
+	<span class="range_max light right">90.000 €</span>                                
+	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="app.js"></script>

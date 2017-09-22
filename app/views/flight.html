@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Flight search engine</title>
+        <link rel="stylesheet" href="../css/flight.css"></link>
+    </head>
+    <body ng-controller="FlightController">
+        <header>
+            <h2>Flight Search Engine </h2>
+        </header>
+        <main>
+            <section class="left-container">
+                <form class="search-form">
+                    <input type="text" name="originCity">
+                    <input type="text" name="destinationCity">
+                    <input class="datePicker" type="date" name="departureDate">
+                    <input class="datePicker" type="date" name="returnDate">
+                    <input type="number" name="passengers">
+                    <br/>
+                    <input type="submit" name="submit" value="Search">
+                </form>
+                <div class="refine-search">
+                    <h4>Refine flight search</h4>
+				    <input type="range" name="refine_flight" min="0" max="10000" step="1">
+                </div>
+                
+            </section>
+            <section class="right-container">
+                <div class="top-right-Container">
+                    <span>Pune > Delhi > Pune</span>
+                    <span>
+                        Depart : 1st Jan 2017<br/>
+                        Return : 1st Jan 2017
+                    </span>
+
+                </div>
+                <div class="bottom-right-container">
+                    <div class="flight-details">
+                        <div><h2> Rs. 9500 <h2></div>
+                        <div class="departure">
+                            <div>AI-202</div>
+                            <div><h3>PNQ>DEL</h3></div>
+                            <div><h3>Depart: 10.00AM</h3></div>
+                            <div><h3>Arrive: 12.00AM</h3></div>
+                        </div>
+                        <div class="arrival">
+                            <div>AI-202</div>
+                            <div><h3>PNQ>DEL</h3></div>
+                            <div><h3>Depart: 10.00AM</h3></div>
+                            <div><h3>Arrive: 12.00AM</h3></div>
+                        </div>
+                        <div class="book">
+                            <div class="book-flight"></div>
+                            <button>Book this flight</button>
+                        </div>
+                    </div>
+
+<!-- 				<table>
+					<tr>
+						<td>
+							<table class="inner-table">				
+								<tr>
+									<td colspan="2"><h3>Rs.9500.00</h3></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>AI-202</td>
+									<td>AI-203</td>
+								</tr>
+								<tr>
+									<td>PNQ>DEL</td>
+									<td>ADEL>PNQ</td>
+								</tr>
+								<tr>
+									<td>Depart: 10.00AM</td>
+									<td>Depart: 08:00PM</td>
+								</tr>
+								<tr>
+									<td>Arrive: 12.00AM</td>
+									<td>Arrive: 11:00PM</td>
+								</tr>
+						</table>	
+						</td>
+					</tr>
+				</table> -->							
+			    </div>
+            </section>           
+        </main>
+    </body>
+</html>

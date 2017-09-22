@@ -1,0 +1,34 @@
+{
+	"flights":[
+		{
+		"flightId":"AI-202",
+		"source":"Pune",
+		"sourceCode":"PNQ",
+		"destination":"Delhi",
+		"destinationCode":"DEL",
+		"departureDateTime":"1st Jan 2017 10:00 AM",
+		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"price":"9500"
+		},
+		{
+		"flightId":"AI-202",
+		"source":"Pune",
+		"sourceCode":"PNQ",
+		"destination":"Delhi",
+		"destinationCode":"DEL",
+		"departureDateTime":"1st Jan 2017 10:00 AM",
+		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"price":"9500"
+		},
+		{
+		"flightId":"AI-202",
+		"source":"Pune",
+		"sourceCode":"PNQ",
+		"destination":"Delhi",
+		"destinationCode":"DEL",
+		"departureDateTime":"1st Jan 2017 10:00 AM",
+		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"price":"9500"
+		}
+	]
+}

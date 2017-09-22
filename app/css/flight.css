@@ -1,0 +1,63 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: Georgia,sans-serif;
+    margin: 2%;
+    border: 2px solid grey;    
+}
+header{
+    border-bottom: 2px solid grey;
+    padding: 1%
+}
+.left-container{
+    width: 18%;
+    padding: 1%;
+    float:left;
+    margin: 1%
+
+}
+.search-form{
+    border: 2px solid grey; 
+    padding: 10px
+}
+input{
+    width:100%;
+    margin-bottom:2px;
+    padding: 5px
+}
+.refine-search{
+    margin-top: 10px;
+    border: 2px solid grey;
+    padding: 10px
+}
+.right-container{
+    width: 74%;
+    border-left: 2px solid grey;
+    float: right;
+}
+.top-right-Container{
+    padding: 4% 0 4% 0;
+    border-bottom:2px solid grey;
+}
+.top-right-Container h2{
+    margin-left: 4%;
+}
+
+.flight-details{
+    border: 2px solid grey;
+    margin: 5px;
+    padding: 1%;
+}
+.departure ,.arrival ,.book,h2{
+    display: inline-block;
+}
+.arrival,.book{
+    margin-left: 30px;
+}
+.book-flight{
+    border: 2px solid grey;
+    padding: 30%;
+    margin-bottom: 5px;
+}
