@@ -3,10 +3,11 @@
 <head>
 	<title>Flight Search Engine</title>
 	<link rel="stylesheet" href="style.css"></link>
+
 </head>
 <body ng-controller="FlightSearchCtrl">
-	<!-- <header>
-		<h2>{{flight}}</h2>
+	 <header>
+		<h2>{{flightHeader}}</h2>
 	</header>
 	<main class="main-container" >
 		<section class="left-container">
@@ -16,13 +17,13 @@
 			</div>
 			<div class="search-form">
 				<form>
-					<input type="text" name="originCity" placeholder="Enter Origin City">
-					<input type="text" name="destinationCity" placeholder="Enter Destination City">
-					<input class="datePicker" type="date" name="departureDate" placeholder="Departure date">
-					<input class="datePicker" ng-show="return" type="date" name="returnDate" placeholder="Return date">
-					<input type="number" name="passengers" placeholder="Passengers">
+					<input type="text" name="originCity" ng-model="flight.source" placeholder="Enter Origin City">
+					<input type="text" name="destinationCity" ng-model="flight.destination" placeholder="Enter Destination City">
+					<input class="datePicker" type="date" name="departureDate" ng-model="flight.departureDate" placeholder="Departure date">
+					<input class="datePicker" ng-show="return" type="date" ng-model="flight.returnDate" name="returnDate" placeholder="Return date">
+					<input type="number" name="passengers" ng-model="passengers" placeholder="Passengers">
 					<br/>
-					<input type="submit" name="submit" value="Search">
+					<input type="button" name="submit" ng-click="search()" value="Search">
 				</form>	
 			</div>
 			<div class="search-form refine-search">
@@ -35,13 +36,13 @@
 				<h2>Pune > Delhi > Pune</h2>
 			</div>
 			<div class="bottom-right-container">
-				<div class="flight-details" ng-repeat="flight in flights.flights">
+				<div class="flight-details" ng-repeat="flight in flights">
                         <div><h2> Rs. {{flight.price}} </h2></div>
                         <div class="departure">
                             <div>{{flight.flightId}}</div>
                             <div><h3>{{flight.sourceCode}} > {{flight.destinationCode}}</h3></div>
-                            <div><h3>Depart: {{flight.departureDateTime}}</h3></div>
-                            <div><h3>Arrive: {{flight.arrivalDateTime}}</h3></div>
+                            <div><h3>Depart: {{flight.departureDate}}</h3></div>
+                            <div><h3>Arrive: {{flight.arrivalDate}}</h3></div>
                         </div>
                         <div class="arrival">
                             <div>AI-202</div>
@@ -50,18 +51,20 @@
                             <div><h3>Arrive: 12.00AM</h3></div>
                         </div>
                         <div class="book">
-                            <div class="book-flight"></div>
-                            <button>Book this flight</button>
+                            <div class="book-flight">
+                            	<img src="image/Image.png">
+                            </div>
+                            <button class="btn">Book this flight</button>
                         </div>
                     </div>									
 			</div>
 		</section> 
-	</main>-->
-	
+	</main>
+<!-- 	
 	<input class="min" name="range_1" type="range" min="1" max="100" value="10" />                                
 	<input class="max" name="range_1" type="range" min="1" max="100" value="90" />                                
 	<span class="range_min light left">10.000 €</span>                                
-	<span class="range_max light right">90.000 €</span>                                
+	<span class="range_max light right">90.000 €</span>  -->                               
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>

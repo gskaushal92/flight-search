@@ -6,8 +6,8 @@
 		"sourceCode":"PNQ",
 		"destination":"Delhi",
 		"destinationCode":"DEL",
-		"departureDateTime":"1st Jan 2017 10:00 AM",
-		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"departureDate":"Sat Sep 23 2017",
+		"arrivalDate" :"2017-09-23",
 		"price":"9500"
 		},
 		{
@@ -16,8 +16,8 @@
 		"sourceCode":"PNQ",
 		"destination":"Delhi",
 		"destinationCode":"DEL",
-		"departureDateTime":"1st Jan 2017 10:00 AM",
-		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"departureDate":"Sat Sep 23 2017",
+		"arrivalDate" :"2017-09-23",
 		"price":"9500"
 		},
 		{
@@ -26,8 +26,8 @@
 		"sourceCode":"PNQ",
 		"destination":"Delhi",
 		"destinationCode":"DEL",
-		"departureDateTime":"1st Jan 2017 10:00 AM",
-		"arrivalDateTime" :"1st Jan 2017 12:00 PM",
+		"departureDate":"1st Jan 2017 10:00 AM",
+		"arrivalDate" :"1st Jan 2017 12:00 PM",
 		"price":"9500"
 		}
 	]

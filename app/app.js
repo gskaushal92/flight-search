@@ -12,17 +12,37 @@ angular.module('myApp',[
 }])
 
 
-.controller('FlightSearchCtrl', ['$scope','FlightService',function($scope,FlightService) {
-	$scope.flight="Flight Search Engine";
+.controller('FlightSearchCtrl', ['$scope','$filter','FlightService',function($scope,$filter,FlightService) {
+	$scope.flightHeader="Flight Search Engine";
 	$scope.flights=[]
-	FlightService.fetchFlights()
-	.then(function(res){
-		//console.log(res);
-		$scope.flights=res.data
-		console.log($scope.flights)
-	},function(){
-		console.log('failure')
-	});
+
+	$scope.flight={
+		'source':'',
+		'destination':'',
+		'departureDate':'',
+		'returnDate':'',
+		'passengers':''
+	}
+
+	$scope.search=function(){		
+		FlightService.fetchFlights()
+		.then(function(res){
+			//console.log(res);
+			let data=res.data
+			$scope.flights=$filter('filter')(data.flights,function(value){
+
+				if($scope.flight.returnDate){
+					return value.source === $scope.flight.source && value.destination === $scope.flight.destination && value.departureDate === $scope.flight.departureDate && value.returnDate===$scope.flight.returnDate
+				}
+				else{
+					return value.source === $scope.flight.source && value.destination === $scope.flight.destination && value.departureDate === $scope.flight.departureDate.toDateString()
+				}
+			})
+			console.log($scope.flights)
+		},function(){
+			console.log('failure')
+		});
+	}
 	//angular.element('.datePicker').datepicker()
 }])
 
